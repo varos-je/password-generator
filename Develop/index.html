@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Password Generator</h1>
+            </header>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Generate a Password</h2>
+                </div>
+
+                <div class="card-body">
+                    <textarea
+                        readonly
+                        id="password"
+                        placeholder="Your Secure Password"
+                        aria-label="Generated Password"></textarea>
+                </div>
+
+                <div class="card-body">
+                    <h3>Set password length (from 8 to 64 characters):</h3>
+                    <h4>Enter a numerical value.</h4>
+                    <input type="text" 
+                        id="password-length"
+                        placeholder="Set your password length"
+                        aria-label="Your password length">
+                    </input>
+                </div>
+
+                <div class="card-body">
+                    <h3>Include the following characters:</h3>
+                    <input type="checkbox" id="lowercase" />
+                    <label for="lowercase">Lowercase</label><br />
+                    <input type="checkbox" id="uppercase" />
+                    <label for="uppercase">Uppercase</label><br />
+                    <input type="checkbox" id="numerical" />
+                    <label for="numerical">Numerical</label><br />
+                    <input type="checkbox" id="special" />
+                    <label for="special">Special</label><br />
+                </div>
+                <div class="card-footer">
+                    <button id="generate" class="btn">Generate Password</button>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
